@@ -1,0 +1,12 @@
+# » vscode 💻
+.vscode/
+*.code-workspace
+
+# » cache 📁
+**/__pycache__
+
+# » .env 📜
+.env
+
+# » pretty sacred file 📝
+info.txt

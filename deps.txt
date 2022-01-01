@@ -1,0 +1,15 @@
+list of dependencies
+===
+
+
+pycord
+win: py -m pip install -U git+https://github.com/Pycord-Development/pycord
+lin: pip install -U git+https://github.com/Pycord-Development/pycord
+
+dotenv
+win: py -m pip install -U python-dotenv
+lin: pip install -U python-dotenv
+
+emoji
+win: py -m pip install -U emoji
+lin: pip install -U emoji
