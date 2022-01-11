@@ -156,9 +156,13 @@ class aircraft(commands.Cog):
 
       # get the embed field to add
       def get_embed_field(field):
-         match field:
-            case "aircraft": return aircraft_data
-            case "dates":    return dates_data
+         # todo: use match/case when pycord supports python 3.10
+         # match field:
+         #    case "aircraft": return aircraft_data
+         #    case "dates":    return dates_data
+
+         if (field == "aircraft"): return aircraft_data
+         if (field == "dates"): return dates_data
 
 
       # select menu

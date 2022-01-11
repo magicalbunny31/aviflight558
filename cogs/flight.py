@@ -146,13 +146,21 @@ class flight(commands.Cog):
 
       # get this flight's current status
       def get_status():
-         match res["status"]:
-            case "EnRoute":           return "en route"
-            case "CheckIn":           return "open for check-in"
-            case "GateClosed":        return "gate has closed"
-            case "Canceled":          return "flight cancelled"
-            case "CanceledUncertain": return "flight cancelled/uncertain"
-            case _:                   return res["status"].lower() # i'm too lazy to re-write all the others
+         # todo: use match/case when pycord supports python 3.10
+         # match res["status"]:
+         #    case "EnRoute":           return "en route"
+         #    case "CheckIn":           return "open for check-in"
+         #    case "GateClosed":        return "gate has closed"
+         #    case "Canceled":          return "flight cancelled"
+         #    case "CanceledUncertain": return "flight cancelled/uncertain"
+         #    case _:                   return res["status"].lower() # i'm too lazy to re-write all the others
+
+         if (res["status"] == "EnRoute"): return "en route"
+         elif (res["status"] == "CheckIn"): return "open for check-in"
+         elif (res["status"] == "GateClosed"): return "gate has closed"
+         elif (res["status"] == "Canceled"): return "flight cancelled"
+         elif (res["status"] == "CanceledUncertain"): return "flight cancelled/uncertain"
+         else: return res["status"].lower()
 
 
       # this is a cargo flight
@@ -276,12 +284,19 @@ class flight(commands.Cog):
 
       # get the embed field to add
       def get_embed_field(field):
-         match field:
-            case "departure": return departure_data
-            case "arrival":   return arrival_data
-            case "flight":    return flight_data
-            case "aircraft":  return aircraft_data
-            case "location":  return location_data
+         # todo: use match/case when pycord supports python 3.10
+         # match field:
+         #    case "departure": return departure_data
+         #    case "arrival":   return arrival_data
+         #    case "flight":    return flight_data
+         #    case "aircraft":  return aircraft_data
+         #    case "location":  return location_data
+
+         if (field == "departure"): return departure_data
+         if (field == "arrival"): return arrival_data
+         if (field == "flight"): return flight_data
+         if (field == "aircraft"): return aircraft_data
+         if (field == "location"): return location_data
 
 
       # select menu

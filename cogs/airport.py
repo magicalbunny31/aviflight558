@@ -181,10 +181,15 @@ class airport(commands.Cog):
 
       # get the embed field to add
       def get_embed_field(field):
-         match field:
-            case "airport": return airport_data
-            case "links":   return links_data
-            case "runways": return runways_data
+         # todo: use match/case when pycord supports python 3.10
+         # match field:
+         #    case "airport": return airport_data
+         #    case "links":   return links_data
+         #    case "runways": return runways_data
+
+         if (field == "airport"): return airport_data
+         if (field == "links"): return links_data
+         if (field == "runways"): return runways_data
 
 
       # select menus
