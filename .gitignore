@@ -10,6 +10,7 @@
 
 # » dev stuff 🤖
 *.rest
+**/uwu.py
 
 # » .env 📜
 .env
