@@ -13,3 +13,11 @@ lin: pip install -U python-dotenv
 emoji
 win: py -m pip install -U emoji
 lin: pip install -U emoji
+
+python-dateutil
+win: py -m pip install -U python-dateutil
+lin: pip install -U python-dateutil
+
+tabulate
+win: py -m pip install -U tabulate --user
+lin: pip install -U tabulate --user
