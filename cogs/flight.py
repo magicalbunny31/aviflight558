@@ -52,7 +52,7 @@ class flight(commands.Cog):
 
       # get flight info
       r = requests.get(
-         f"https://aerodatabox.p.rapidapi.com/flights/number/{callsign}?withAircraftImage=true&withLocation=true", # https://doc.aerodatabox.com/#operation/GetFlight
+         f"https://aerodatabox.p.rapidapi.com/flights/number/{callsign.lower()}?withAircraftImage=true&withLocation=true", # https://doc.aerodatabox.com/#operation/GetFlight
          headers = {
             "Accept": "application/json",
             "User-Agent": f"discord-aviflight558-bot/{config['version']} ({os.getenv('AGENT')}) (https://github.com/magicalbunny31/aviflight558)",

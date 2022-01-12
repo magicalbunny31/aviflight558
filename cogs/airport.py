@@ -49,7 +49,7 @@ class airport(commands.Cog):
 
       # get airport info
       r = requests.get(
-         f"https://aerodatabox.p.rapidapi.com/airports/{'iata' if is_iata_code else 'icao'}/{code}?withRunways=true", # https://doc.aerodatabox.com/#operation/GetAirport
+         f"https://aerodatabox.p.rapidapi.com/airports/{'iata' if is_iata_code else 'icao'}/{code.lower()}?withRunways=true", # https://doc.aerodatabox.com/#operation/GetAirport
          headers = {
             "Accept": "application/json",
             "User-Agent": f"discord-aviflight558-bot/{config['version']} ({os.getenv('AGENT')}) (https://github.com/magicalbunny31/aviflight558)",

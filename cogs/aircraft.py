@@ -41,7 +41,7 @@ class aircraft(commands.Cog):
 
       # get aircraft info
       r = requests.get(
-         f"https://aerodatabox.p.rapidapi.com/aircrafts/reg/{registration}", # https://doc.aerodatabox.com/#operation/GetAircraft
+         f"https://aerodatabox.p.rapidapi.com/aircrafts/reg/{registration.lower()}", # https://doc.aerodatabox.com/#operation/GetAircraft
          headers = {
             "Accept": "application/json",
             "User-Agent": f"discord-aviflight558-bot/{config['version']} ({os.getenv('AGENT')}) (https://github.com/magicalbunny31/aviflight558)",
