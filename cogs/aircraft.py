@@ -31,9 +31,6 @@ class aircraft(commands.Cog):
       info = "<:info:792165588331921489>"
       camcorder = "<:camcorder:924387366225981510>"
 
-      phone = "<:phone:864529940141441035>"
-      laptop = "<:laptop:884098085754634280>"
-
 
       # defer the reply
       await ctx.defer()

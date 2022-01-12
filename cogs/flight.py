@@ -31,8 +31,6 @@ class flight(commands.Cog):
       no  = "<:no:792173102377205811>"
 
       camcorder = "<:camcorder:924387366225981510>"
-      phone = "<:phone:864529940141441035>"
-      laptop = "<:laptop:884098085754634280>"
 
 
       # check if this is a valid callsign

@@ -30,11 +30,11 @@ class airport(commands.Cog):
 
 
       # check if this is a valid airport code
-      iata_code_regex = re.compile("^[a-z]{3}$")
+      iata_code_regex = re.compile("^[a-z]{3}$", re.I)
       is_iata_code = bool(iata_code_regex.match(code))
 
       icao_code_regex = re.compile("^[a-z]{4}$")
-      is_icao_code = bool(icao_code_regex.match(code))
+      is_icao_code = bool(icao_code_regex.match(code), re.I)
 
       if not (is_iata_code or is_icao_code):
          return await ctx.respond(
